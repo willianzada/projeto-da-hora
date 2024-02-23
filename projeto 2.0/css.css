@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300&display=swap');
+
+body, html {
+    background-color: rgb(5, 116, 29);
+    height: 100%;
+    display: flex;
+    margin: 0%;
+    justify-content: center;
+    align-items: center;
+}
+.relogio {
+    --border-size: 7px;
+    --border-angle: 1turn; 
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    height: 200px;
+    width: 550px;
+    background: transparent;
+    margin: auto;
+}
+
+.relogio:hover {
+    animation-play-state: paused;
+}
+
+.relogio div {
+    text-align: center;
+    height: 170px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgb(254, 255, 253);
+    box-shadow: 0px 8px 10px rgba(172, 189, 20, 0.5), 0px 8px 10px rgba(181, 243, 9, 0.5), 0px 8px 10px rgba(236, 240, 10, 0.5);
+    border-radius: 7px;
+    letter-spacing: 3px;
+    border-radius: 3px;
+    background-image: conic-gradient(
+        from var(--border-angle),
+        #213,
+        #112 50%,
+        #213
+    ),
+    conic-gradient(
+        from var(--border-angle),
+        transparent 20%,
+        #08f,
+        #f03
+    );
+    background-size: calc(100% - (var(--border-size)*2)) calc(100% - (var(--border-size)*2)), cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    animation: bg-spin 3s linear infinite;
+}
+
+@keyframes bg-spin {
+    to {
+        --border-angle: 1turn; 
+    }
+}
+
+
+.relogio span {
+    font-weight: bolder;
+    font-size: 60px;
+}
+
+.relogio span.tempo {
+    font-size: 10px;
+}
+
+
+
+
+
